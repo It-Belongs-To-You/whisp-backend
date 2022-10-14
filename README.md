@@ -1,17 +1,18 @@
 [here]: ./LICENSE
 [architecture]: ./docs/architecture.md
 
-## Whisp API (Backend)
+## Whisp Node
 
-Whisp API is a simple API for storing and retrieving messages. It is designed to be used as a backend for whisps, a simple open source
-cryptographically secure app for sending and receiving messages.
+Whisp Node is a simple express app for storing all the client's public key's in a list. The server is also responsible for storing encrypted message's until they can be transferred to the client. It is designed to be used as a backend for client, a simple open source cryptographically secure client for sending and receiving messages.
 
-The project borrow's concept's from **Bitcoin's blockchain**, to secure messages.
+The project borrow's concept's from **Bitcoin's blockchain**, to secure messages. Such as BIP39 and Encryption Mechanisms.
 
 ### Architecture
 
 The architecture is still being decided and once it's done the [Architecture][architecture] document would be updated. I'm still actively
-working on building a design which is immuateable and also secure.
+working on building a design which is immuateable and also secure. Contributions/Ideas/Suggestions are truly welcome.
+
+The current architecture is a simple websocket server which is used to send and receive encrypted messages. The server is also responsible for storing the public keys of the clients, storing the encrypted messages until they can be transferred to the client's public key.
 
 ### Technologies used
 
